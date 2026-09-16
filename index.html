@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://app.loupa.ai/loupa-favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://app.loupa.ai/loupa-favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://app.loupa.ai/loupa-favicon.png">
+    <meta property="og:image:secure_url" content="https://app.loupa.ai/loupa-favicon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://app.loupa.ai/loupa-favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Finally Ended the 8am War in My House — One Small Win at a Time</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#FBF2DC;
+    --secondary:#C99042;
+    --heading:#292112;
+    --ink:#1c1a14;
+    --muted:#6b6455;
+    --line:rgba(41,33,18,0.10);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#FFFFFF;
+    color:var(--ink);
+    font-size:18px;
+    line-height:1.75;
+    margin:0;
+    padding-bottom:96px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{color:var(--heading);font-weight:700;line-height:1.18;}
+  h1{font-size:clamp(1.85rem,4.4vw,2.65rem)!important;font-weight:800!important;line-height:1.15!important;}
+  h2{font-size:clamp(1.6rem,3.6vw,2.15rem)!important;font-weight:700!important;line-height:1.2!important;margin-bottom:18px!important;}
+  h3{font-size:clamp(1.25rem,2.4vw,1.5rem)!important;font-weight:700!important;margin-bottom:12px!important;}
+  p{margin-bottom:1.4em!important;}
+  .wrap{max-width:680px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;}
+  .wrap-wide{max-width:1040px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;}
+  section{scroll-margin-top:24px;}
+  .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:600;color:var(--secondary);}
+  .sec{padding:76px 0;}
+  @media(max-width:640px){.sec{padding:52px 0;}}
+  figure{margin:0;}
+  .ratio169{aspect-ratio:16/9;width:100%;object-fit:cover;display:block;border-radius:16px;}
+  .ratio11{aspect-ratio:1/1;width:100%;object-fit:cover;display:block;border-radius:14px;}
+  .imgblock{margin-top:44px;margin-bottom:24px;}
+  .cap{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.5;}
+  a.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--secondary);color:#fff;font-weight:700;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(201,144,66,.28);transition:.18s;}
+  a.btn:hover{background:#b57c33;transform:translateY(-2px);}
+  .callout{background:rgba(251,242,220,.7);border-left:4px solid var(--secondary);border-radius:12px;padding:26px 28px;font-size:20px;line-height:1.6;color:var(--heading);}
+  .toc{background:var(--primary);border:1px solid var(--line);border-radius:16px;padding:28px 30px;}
+  .toc a{display:flex;gap:14px;text-decoration:none;color:var(--heading);padding:9px 0;border-bottom:1px solid rgba(41,33,18,.08);font-weight:500;}
+  .toc a:last-child{border-bottom:none;}
+  .toc a:hover{text-decoration:underline;}
+  .toc .num{color:var(--secondary);font-weight:700;font-variant-numeric:tabular-nums;}
+  .rlist{list-style:none;padding:0;margin:0;}
+  .rlist li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);}
+  .rlist li:last-child{border-bottom:none;}
+  .ic{flex-shrink:0;width:30px;height:30px;aspect-ratio:1;border-radius:50%;background:var(--primary);display:inline-flex;align-items:center;justify-content:center;margin-top:3px;}
+  .cardgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:900px){.cardgrid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:620px){.cardgrid{grid-template-columns:1fr;}}
+  .fcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px;box-shadow:0 4px 24px rgba(0,0,0,.05);}
+  .badge{width:44px;height:44px;aspect-ratio:1;border-radius:50%;background:var(--secondary);color:#fff;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:19px;}
+  .tl{list-style:none;padding:0;margin:0;position:relative;}
+  .tl li{display:flex;gap:20px;padding-bottom:34px;position:relative;}
+  .tl li:before{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--line);}
+  .tl li:last-child:before{display:none;}
+  .tlnum{width:44px;height:44px;aspect-ratio:1;border-radius:50%;background:var(--primary);color:var(--secondary);border:2px solid var(--secondary);font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+  table.cmp{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+  table.cmp th,table.cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:16px;vertical-align:top;}
+  table.cmp thead th{background:var(--heading);color:#fff;font-weight:600;}
+  table.cmp .win{background:rgba(251,242,220,.7);}
+  .offer{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.08);padding:34px;}
+  .prod{max-width:400px;margin:22px auto 8px;}
+  .blist{list-style:none;padding:0;margin:20px 0;}
+  .blist li{display:flex;gap:13px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line);}
+  .blist li:last-child{border-bottom:none;}
+  .chk{flex-shrink:0;width:26px;height:26px;aspect-ratio:1;border-radius:50%;background:var(--primary);display:inline-flex;align-items:center;justify-content:center;margin-top:2px;}
+  .price{font-size:40px;font-weight:800;color:var(--heading);white-space:nowrap;}
+  .strike{color:var(--muted);text-decoration:line-through;font-size:20px;white-space:nowrap;}
+  .save{background:var(--secondary);color:#fff;font-size:13px;font-weight:700;padding:5px 11px;border-radius:20px;}
+  .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px;}
+  .meta div{border:1px solid var(--line);border-radius:10px;padding:12px 8px;text-align:center;font-size:13px;color:var(--muted);}
+  .meta strong{display:block;color:var(--heading);font-size:15px;}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,.04);}
+  .avatar{width:46px;height:46px;aspect-ratio:1;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .vtag{font-size:12px;color:var(--secondary);font-weight:600;}
+  .faq{border-bottom:1px solid var(--line);}
+  .faq button{width:100%;text-align:left;background:none;border:none;padding:22px 0;font-size:18px;font-weight:600;color:var(--heading);display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;font-family:inherit;}
+  .faq .ans{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq .ans p{padding-bottom:22px;margin:0!important;color:var(--ink);}
+  .faq svg{flex-shrink:0;transition:transform .3s;}
+  .faq.open svg{transform:rotate(180deg);}
+  .sticky{position:fixed;bottom:0;left:0;right:0;z-index:50;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 24px rgba(0,0,0,.08);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+  .sticky .val{font-size:14px;line-height:1.3;}
+  .sticky .val strong{color:var(--heading);}
+  @media(max-width:640px){
+    .sticky{flex-direction:column;gap:8px;padding:12px 16px;}
+    .sticky a.btn{width:100%;}
+    .sticky .val{display:none;}
+    .offer{padding:24px 20px;}
+    .price{font-size:36px;}
+  }
+  .stars{display:inline-flex;gap:2px;}
+  .bar{height:8px;border-radius:6px;background:var(--line);overflow:hidden;flex:1;}
+  .bar span{display:block;height:100%;background:var(--secondary);}
+  @media (prefers-reduced-motion:no-preference){
+    .fade{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;}
+    .fade.in{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- AD DISCLOSURE -->
+<div style="background:#f3efe6;color:#6b6455;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:7px 12px;">Advertisement</div>
+
+<!-- HEADER -->
+<header class="wrap" style="padding-top:44px;padding-bottom:8px;">
+  <p class="eyebrow" style="margin-bottom:14px;">Parenting · ADHD Households</p>
+  <h1 style="margin-bottom:16px;">How I Finally Ended the 8am War in My House — One Small Win at a Time</h1>
+  <p style="font-size:20px;color:var(--muted);margin-bottom:22px!important;">For three years, every morning started with yelling and every evening ended in tears. Then I stopped trying to fix my son — and started tracking what actually worked.</p>
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted);">
+    <img class="avatar" style="width:40px;height:40px;" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/author-avatar_1789553555785.jpg" alt="Author Melissa R.">
+    <span><strong style="color:var(--heading);">By Melissa R.</strong></span>
+    <span>·</span><span>Updated March 2025</span><span>·</span><span>9 min read</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="wrap imgblock">
+  <figure>
+    <img class="ratio169" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/hero_1789553555785.png" alt="A chaotic school morning in a family kitchen">
+    <figcaption class="cap">7:52am. Shoes still off, cereal untouched, and the bus in eight minutes. This was my normal for three years.</figcaption>
+  </figure>
+</div>
+
+<!-- TOC -->
+<div class="wrap">
+  <nav class="toc">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <span class="eyebrow">Contents</span>
+    </div>
+    <a href="#hook"><span class="num">01</span><span>The morning I sat on the bathroom floor</span></a>
+    <a href="#recognize"><span class="num">02</span><span>Maybe you know this too</span></a>
+    <a href="#cost"><span class="num">03</span><span>What the daily battles were really costing us</span></a>
+    <a href="#failed"><span class="num">04</span><span>Everything I tried that didn't stick</span></a>
+    <a href="#low"><span class="num">05</span><span>The night I almost gave up on structure</span></a>
+    <a href="#discovery"><span class="num">06</span><span>The realization that changed everything</span></a>
+    <a href="#how"><span class="num">07</span><span>Why this actually works for ADHD brains</span></a>
+    <a href="#product"><span class="num">08</span><span>The system I use every single day</span></a>
+    <a href="#timeline"><span class="num">09</span><span>What our 30 days actually looked like</span></a>
+    <a href="#compare"><span class="num">10</span><span>The old way vs. now</span></a>
+    <a href="#reviews"><span class="num">11</span><span>What other parents are saying</span></a>
+    <a href="#offer"><span class="num">12</span><span>How to get it</span></a>
+    <a href="#faq"><span class="num">13</span><span>Questions parents ask me</span></a>
+  </nav>
+</div>
+
+<!-- HOOK -->
+<section id="hook" class="sec">
+  <div class="wrap fade">
+    <h2>The morning I sat on the bathroom floor and cried</h2>
+    <p>It was a Tuesday. My son Leo was seven. We were forty minutes into a fight about socks — the seam kind, the ones that "feel wrong" — and I had already yelled twice.</p>
+    <p>He was on the floor, screaming. I was standing over him, hearing my own voice go sharp and ugly in a way I hated. The bus came and went. Again.</p>
+    <p>When he finally left with his dad, I walked into the bathroom, shut the door, sat down on the cold tile, and cried until my chest hurt.</p>
+    <p>I remember thinking one very specific thought: <em>It's not even 8am, and I've already failed him today.</em></p>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section id="recognize" class="sec" style="background:var(--primary);">
+  <div class="wrap fade">
+    <p class="eyebrow" style="margin-bottom:12px;">Sound familiar?</p>
+    <h2>Maybe you know this too</h2>
+    <p style="margin-bottom:26px!important;">If you're parenting a child with ADHD, I don't need to describe the chaos. You live it. But here's what nobody says out loud:</p>
+    <ul class="rlist">
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><span>Getting dressed takes 45 minutes and three warnings, and you still end up doing it yourself.</span></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><span>Homework turns into a standoff — pencils thrown, doors slammed, both of you in tears.</span></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><span>You dread transitions: leaving the park, turning off the tablet, coming to dinner.</span></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><span>You've been "the yelling parent" in the grocery store, and you've felt the stares.</span></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><span>You lie awake afterward wondering if you're the reason your child is struggling.</span></li>
+    </ul>
+    <p style="margin-top:24px!important;">If you nodded at even two of those — I promise, you're not doing it wrong. You're doing something exhausting with tools that were never built for your kid's brain.</p>
+  </div>
+</section>
+
+<!-- COST -->
+<section id="cost" class="sec">
+  <div class="wrap fade">
+    <h2>What the daily battles were really costing us</h2>
+    <p>For a long time I told myself the mornings were just hard. That's what I said to other parents. "He's just a handful in the mornings."</p>
+    <p>But it wasn't just mornings. It was the pit in my stomach at 6:30am before he even woke up. It was the way I started rushing dinner so we'd have "enough runway" before the bedtime meltdown.</p>
+    <p>It was Leo, at seven, telling me he was "the bad kid." Somewhere in all the correcting and hurrying and warning, he had absorbed the idea that he was a problem to be managed.</p>
+  </div>
+  <div class="wrap imgblock fade">
+    <figure>
+      <img class="ratio169" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/cost-scene_1789553555785.png" alt="Evening after a homework meltdown">
+      <figcaption class="cap">Every evening ended the same way. The worksheet unfinished, both of us drained.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap fade">
+    <p>The worst part wasn't the noise. It was the distance. The more I fought to control the day, the less connected we felt. By the end of most evenings, we were two people who loved each other and could barely be in the same room.</p>
+    <p>And I was burning out. Genuinely. I started to believe that structure just didn't work for a kid like mine — that maybe I should stop trying to build routines at all.</p>
+  </div>
+</section>
+
+<!-- FAILED -->
+<section id="failed" class="sec" style="background:var(--primary);">
+  <div class="wrap fade">
+    <p class="eyebrow" style="margin-bottom:12px;">The things that didn't work</p>
+    <h2>Everything I tried that didn't stick</h2>
+    <p style="margin-bottom:26px!important;">I want you to know I wasn't lazy about this. I read the books. I tried the systems. Here's what I ran through — and why each one fell apart:</p>
+    <ul class="rlist">
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">The generic sticker chart.</strong> It worked for four days, then Leo stopped caring. The reward was too far away and too vague for a brain that lives in <em>right now</em>.</div></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Yelling louder / more consequences.</strong> It escalated everything. He'd shut down completely, and I'd feel like a monster afterward. Nobody won.</div></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Rigid "perfect" routines.</strong> The Pinterest charts assume a kid who does step one, then step two. One bad transition and the whole day collapsed — and so did my confidence.</div></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Generic parenting advice.</strong> "Just stay calm and consistent." Great — but it was written for a brain that doesn't fight transitions or chase novelty the way ADHD brains do.</div></li>
+      <li><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Winging it day to day.</strong> Without any way to see what was actually happening, every hard day felt like proof that nothing would ever work.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- LOW POINT -->
+<section id="low" class="sec">
+  <div class="wrap fade">
+    <h2>The night I almost gave up on structure entirely</h2>
+    <p>There was a night — a bad one — where after a two-hour bedtime battle I sat at the kitchen table and told my husband, flatly, "I don't think I'm cut out for this."</p>
+    <p>I wasn't being dramatic. I meant it. I felt like I was failing the person I loved most, every single day, in slow motion.</p>
+    <div class="callout" style="margin:8px 0 20px;">"I wasn't a bad mom. I was a good mom holding the wrong map — one that was never drawn for my son's brain."</div>
+    <p>That sentence is the closest thing I have to a turning point. Because once I stopped believing <em>I</em> was broken, I got curious about what actually was.</p>
+  </div>
+</section>
+
+<!-- DISCOVERY -->
+<section id="discovery" class="sec" style="background:var(--primary);">
+  <div class="wrap fade">
+    <p class="eyebrow" style="margin-bottom:12px;">The realization</p>
+    <h2>What changed everything: I stopped guessing and started tracking</h2>
+    <p>Here's the shift. I realized I had no idea what was actually triggering the meltdowns — I was just reacting to them.</p>
+    <p>Was it the socks, or was it that he was hungry? Was homework the problem, or was it the ten minutes of screen time right before it? I genuinely didn't know. I was fighting a fog.</p>
+    <p>So I started doing something almost embarrassingly simple. Every morning and every night, I filled in a short checklist for Leo. Small, specific steps. And after he was asleep, I wrote one honest line: <em>what worked today, and what tipped him over.</em></p>
+  </div>
+  <div class="wrap imgblock fade">
+    <figure>
+      <img class="ratio169" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/reflection_1789553555785.png" alt="Filling in the nightly reflection">
+      <figcaption class="cap">Two minutes a night. That's all it took to start seeing the patterns I'd been blind to.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap fade">
+    <p>Within a week, the patterns jumped off the page. Meltdowns clustered around transitions with no warning. Good mornings almost always followed nights where he'd earned points for something small the day before.</p>
+    <p>For the first time, I wasn't reacting. I was <strong>seeing</strong>. And that changed how I parented before 8am ever arrived.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="sec">
+  <div class="wrap fade">
+    <h2>Why this actually works for an ADHD brain</h2>
+    <p>Once I understood the "why," I stopped trying to force Leo into a system built for a different kid.</p>
+    <p>ADHD brains are wired around <strong>dopamine and novelty</strong>. A reward two weeks away means nothing. But a small win marked <em>right now</em>, that he can see and feel proud of, lands. That's why the point system works where the sticker chart failed — the win is immediate and visible.</p>
+    <p>ADHD brains also fight <strong>transitions</strong> hardest. A predictable morning and evening rhythm — the same simple steps, in the same order — takes the surprise out of the moment his brain resists most.</p>
+    <p>And the nightly reflection? That's the part that made me a better parent. Because seeing the pattern let me remove the trigger <em>before</em> the meltdown, instead of just surviving it after.</p>
+    <p>It's not about sticker charts. It's a reward system <em>plus</em> a reflection log, so you finally see the pattern — not just the stickers.</p>
+  </div>
+  <div class="wrap imgblock fade">
+    <figure>
+      <img class="ratio169" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/mechanism_1789553555785.png" alt="How the system works: small win, mark points, reflect">
+      <figcaption class="cap">Three tiny daily actions that work <em>with</em> an ADHD brain instead of against it.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section id="product" class="sec" style="background:var(--primary);">
+  <div class="wrap fade">
+    <p class="eyebrow" style="margin-bottom:12px;">The system I use</p>
+    <h2>The 30-day tracker I now can't parent without</h2>
+    <p>What started as scribbles on a notepad became something I now rely on every day: <strong>The Calm Parent Reset</strong> — a 30-day guided tracker paired with a daily reward chart, built specifically around how ADHD kids actually behave.</p>
+    <p>It's a simple morning and evening checklist you fill in for your child, a point system to mark the small wins as they happen, and a short nightly reflection prompt so you start to see what's really going on.</p>
+    <p style="margin-bottom:30px!important;">No perfection required. The goals are flexible and low-pressure — designed for a real ADHD household, not a fantasy one.</p>
+  </div>
+  <div class="wrap-wide fade">
+    <div class="cardgrid">
+      <div class="fcard">
+        <span class="badge">1</span>
+        <p class="eyebrow" style="margin:18px 0 8px;">Morning + Evening</p>
+        <h3>A predictable rhythm</h3>
+        <p style="margin:0!important;color:var(--muted);font-size:16px;">Simple checklists for the two moments that used to fall apart — so both of you know exactly what comes next.</p>
+      </div>
+      <div class="fcard">
+        <span class="badge">2</span>
+        <p class="eyebrow" style="margin:18px 0 8px;">Point System</p>
+        <h3>Wins that land right now</h3>
+        <p style="margin:0!important;color:var(--muted);font-size:16px;">Mark small wins the moment they happen — the immediate, visible reward ADHD brains are actually motivated by.</p>
+      </div>
+      <div class="fcard">
+        <span class="badge">3</span>
+        <p class="eyebrow" style="margin:18px 0 8px;">Nightly Reflection</p>
+        <h3>See patterns, not just stickers</h3>
+        <p style="margin:0!important;color:var(--muted);font-size:16px;">One short prompt each night reveals what worked and what triggered dysregulation — so you can adjust tomorrow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="sec">
+  <div class="wrap fade">
+    <h2>What our 30 days actually looked like</h2>
+    <p style="margin-bottom:30px!important;">I'm not going to promise a miracle. It wasn't magic — it was momentum. Here's how it unfolded for us, honestly.</p>
+    <ul class="tl">
+      <li>
+        <span class="tlnum">1</span>
+        <div>
+          <h3 style="margin-bottom:8px!important;">Days 1–7: Just tracking</h3>
+          <p style="margin:0!important;color:var(--ink);">The mornings were still hard. But I filled in the checklists and started my nightly line. By day five, I could see the transition triggers clearly for the first time.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tlnum">2</span>
+        <div>
+          <h3 style="margin-bottom:8px!important;">Days 8–14: The first calm morning</h3>
+          <p style="margin:0!important;color:var(--ink);">Leo earned points for getting dressed before breakfast — and he beamed. We had our first meltdown-free morning in months. I nearly cried, for a good reason this time.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tlnum">3</span>
+        <div>
+          <h3 style="margin-bottom:8px!important;">Days 15–21: He started asking for it</h3>
+          <p style="margin:0!important;color:var(--ink);">"Did I get my point?" became part of his day. The rhythm was doing the heavy lifting — I was warning and rushing far less. Homework had fewer explosions.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tlnum">4</span>
+        <div>
+          <h3 style="margin-bottom:8px!important;">Days 22–30: A different house</h3>
+          <p style="margin:0!important;color:var(--ink);">Not perfect — we still had rough days. But they were the exception, not the rule. And the biggest change wasn't the routine. It was that Leo stopped calling himself "the bad kid," and I stopped feeling like a failure by 8am.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section id="compare" class="sec" style="background:var(--primary);">
+  <div class="wrap fade">
+    <h2>The old way vs. now</h2>
+    <div style="overflow-x:auto;margin-top:20px;">
+      <table class="cmp">
+        <thead><tr><th>Then</th><th class="win">Now</th></tr></thead>
+        <tbody>
+          <tr><td>Reacting to meltdowns after they happened</td><td class="win">Seeing the trigger and removing it beforehand</td></tr>
+          <tr><td>Generic sticker chart he ignored by day 4</td><td class="win">Immediate points that keep an ADHD brain motivated</td></tr>
+          <tr><td>Rigid routine that collapsed after one bad moment</td><td class="win">Flexible, low-pressure goals built for real days</td></tr>
+          <tr><td>Yelling by 8am, feeling like a failure</td><td class="win">A predictable rhythm we both know and trust</td></tr>
+          <tr><td>Leo calling himself "the bad kid"</td><td class="win">Leo proud of small wins he can see</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="sec">
+  <div class="wrap fade">
+    <h2>What other parents are saying</h2>
+    <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center;margin:20px 0 34px;">
+      <div style="text-align:center;">
+        <div style="font-size:44px;font-weight:800;color:var(--heading);line-height:1;">4.8</div>
+        <div class="stars" style="margin:6px 0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </div>
+        <div style="font-size:13px;color:var(--muted);">from parents like us</div>
+      </div>
+      <div style="flex:1;min-width:220px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:13px;color:var(--muted);">5★<div class="bar"><span style="width:86%"></span></div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:13px;color:var(--muted);">4★<div class="bar"><span style="width:11%"></span></div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:13px;color:var(--muted);">3★<div class="bar"><span style="width:2%"></span></div></div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);">2★<div class="bar"><span style="width:1%"></span></div></div>
+      </div>
+    </div>
+    <div class="cardgrid">
+      <div class="rev">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px;">
+          <img class="avatar" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/rev1_1789553555785.jpg" alt="Danielle K.">
+          <div><strong style="color:var(--heading);">Danielle K.</strong><div class="vtag">Verified purchase · 2 weeks ago</div></div>
+        </div>
+        <div class="stars" style="margin-bottom:8px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </div>
+        <p style="margin:0!important;font-size:16px;">The nightly reflection was the game changer for me. Turns out my daughter's meltdowns were almost always right after screen time. I never would've spotted that on my own.</p>
+      </div>
+      <div class="rev">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px;">
+          <img class="avatar" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/rev2_1789553555785.jpg" alt="Marcus T.">
+          <div><strong style="color:var(--heading);">Marcus T.</strong><div class="vtag">Verified purchase · 1 month ago</div></div>
+        </div>
+        <div class="stars" style="margin-bottom:8px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </div>
+        <p style="margin:0!important;font-size:16px;">Not a magic fix — we still have rough mornings. But my son actually asks about his points now, and that little bit of pride goes a long way. Worth it.</p>
+      </div>
+      <div class="rev">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px;">
+          <img class="avatar" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/rev3_1789553555785.jpg" alt="Priya S.">
+          <div><strong style="color:var(--heading);">Priya S.</strong><div class="vtag">Verified purchase · 3 weeks ago</div></div>
+        </div>
+        <div class="stars" style="margin-bottom:8px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </div>
+        <p style="margin:0!important;font-size:16px;">What I love is that it doesn't demand perfection. Every other chart made me feel like a failure when we skipped a day. This one just picks back up. Finally something realistic.</p>
+      </div>
+      <div class="rev">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px;">
+          <img class="avatar" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/rev4_1789553555785.jpg" alt="Kayla B.">
+          <div><strong style="color:var(--heading);">Kayla B.</strong><div class="vtag">Verified purchase · 5 days ago</div></div>
+        </div>
+        <div class="stars" style="margin-bottom:8px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </div>
+        <p style="margin:0!important;font-size:16px;">I printed it out the first night and we started the next morning. By the end of week two our getting-dressed fight had basically disappeared. I still can't quite believe it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section id="offer" class="sec" style="background:var(--primary);">
+  <div class="wrap fade">
+    <div class="offer">
+      <p class="eyebrow">Printable · 25 pages · Start tomorrow morning</p>
+      <h2 style="margin:8px 0 10px!important;">The Calm Parent Reset — 30-Day ADHD Focus &amp; Reward System</h2>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+        <span class="stars" style="white-space:nowrap;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="17" height="17" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="17" height="17" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="17" height="17" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg><svg width="17" height="17" viewBox="0 0 24 24" fill="#C99042"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </span>
+        <span style="font-weight:700;color:var(--heading);">4.8</span>
+        <span style="color:var(--muted);font-size:14px;">loved by exhausted parents</span>
+      </div>
+
+      <div class="prod">
+        <img class="ratio11" src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/adhs-reset-ad/product-sheets_1789553555785.png" alt="The Calm Parent Reset printed tracker sheets">
+      </div>
+
+      <ul class="blist">
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Morning &amp; evening checklists</strong><div style="color:var(--muted);font-size:15px;">A predictable rhythm for the two moments that fall apart most.</div></div></li>
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Daily reward point system</strong><div style="color:var(--muted);font-size:15px;">Immediate, visible wins that keep ADHD brains motivated.</div></div></li>
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Nightly reflection prompts</strong><div style="color:var(--muted);font-size:15px;">Spot the triggers and patterns behind the meltdowns.</div></div></li>
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong style="color:var(--heading);">Flexible, low-pressure goals</strong><div style="color:var(--muted);font-size:15px;">Built for real ADHD households, not fantasy perfect ones.</div></div></li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px;">
+        <span class="price">USD&nbsp;17.95</span>
+        <span class="strike">USD&nbsp;22.95</span>
+        <span class="save">Save USD 5</span>
+      </div>
+
+      <a class="btn" href="https://advaice.io" style="width:100%;font-size:18px;">Get the 30-Day Reset
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <ul class="blist" style="margin-top:22px;">
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><span style="font-size:15px;">Printable — you can start tomorrow morning</span></li>
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><span style="font-size:15px;">Designed around real ADHD behavior patterns</span></li>
+        <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span><span style="font-size:15px;">No perfection required — pick back up on hard days</span></li>
+      </ul>
+
+      <p style="font-size:14px;color:var(--muted);margin:0!important;text-align:center;">A calm-morning quality guarantee: this system is built to give your household a predictable rhythm — one small win at a time.</p>
+
+      <div class="meta">
+        <div><strong>25</strong>pages</div>
+        <div><strong>30</strong>day plan</div>
+        <div><strong>Ages 5–12</strong>ADHD-focused</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec">
+  <div class="wrap fade">
+    <h2>Questions parents ask me</h2>
+    <div style="margin-top:20px;">
+      <div class="faq">
+        <button onclick="toggleFaq(this)">Will this actually work for my child? Every kid is different.<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="ans"><p>You're right — no two ADHD kids are the same. That's exactly why the reflection log matters: it helps <em>you</em> learn what triggers <em>your</em> child, instead of forcing them into a one-size-fits-all chart. The goals are flexible on purpose, so you shape it around your household.</p></div>
+      </div>
+      <div class="faq">
+        <button onclick="toggleFaq(this)">I've tried reward charts before and they stopped working. How is this different?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="ans"><p>Generic charts fail because the reward is too far away and too vague for an ADHD brain. This uses immediate, visible points for small wins <em>as they happen</em> — plus a reflection log so you see patterns, not just stickers. It's built specifically around transition resistance and dopamine-driven motivation.</p></div>
+      </div>
+      <div class="faq">
+        <button onclick="toggleFaq(this)">How much time does it take each day?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="ans"><p>Just a couple of minutes. A quick morning and evening checklist, marking points as wins happen, and one short reflection line at night. It's designed for tired parents — not to add another exhausting task to your day.</p></div>
+      </div>
+      <div class="faq">
+        <button onclick="toggleFaq(this)">My child isn't diagnosed yet — is this still useful?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="ans"><p>Many parents use it while showing signs of ADHD, not only after a formal diagnosis. It's a supportive daily structure, not a medical tool — always speak with your pediatrician about diagnosis and treatment questions.</p></div>
+      </div>
+      <div class="faq">
+        <button onclick="toggleFaq(this)">What exactly do I get?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="ans"><p>A 25-page printable habit and goal tracker: a 30-day guided plan with morning and evening checklists, a daily reward point system, and nightly reflection prompts. You print it out and start the next morning.</p></div>
+      </div>
+      <div class="faq">
+        <button onclick="toggleFaq(this)">Is $17.95 worth it for a printable?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99042" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="ans"><p>For me, the value wasn't the paper — it was getting my mornings back and stopping the feeling that I was failing my son by 8am. It's built specifically around ADHD behavior, so you're paying for a system, not just a blank chart you have to figure out alone.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec" style="background:var(--secondary);color:#fff;text-align:center;">
+  <div class="wrap fade">
+    <h2 style="color:#fff!important;">Your calmer morning can start tomorrow</h2>
+    <p style="color:#fff;font-size:19px;margin-bottom:26px!important;opacity:.95;">You don't have to keep white-knuckling your way through 8am. Bring structure and calm to ADHD mornings and evenings in 30 days — one small win at a time.</p>
+    <a class="btn" href="https://advaice.io" style="background:#fff;color:var(--heading);">Get the 30-Day Reset
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#292112" stroke-width="2.4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#fff;padding:44px 0;border-top:1px solid var(--line);">
+  <div class="wrap" style="text-align:center;color:var(--muted);font-size:13px;">
+    <p style="font-weight:700;color:var(--heading);margin-bottom:10px!important;">The Calm Parent Reset</p>
+    <p style="margin-bottom:10px!important;">This is a supportive parenting tracker, not medical advice, diagnosis, or treatment. Results vary from family to family. For questions about your child's diagnosis or care, please consult a qualified healthcare professional. Melissa's story reflects one parent's personal experience.</p>
+    <p style="margin:0!important;">© 2025 The Calm Parent Reset. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY -->
+<div class="sticky">
+  <div class="val"><strong>The Calm Parent Reset</strong><br>Structure &amp; calm in 30 days · <span style="color:var(--secondary);font-weight:700;">USD 17.95</span></div>
+  <a class="btn" href="#offer">Start your reset
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+  </a>
+</div>
+
+<script>
+  function toggleFaq(btn){
+    var item=btn.parentElement;
+    var ans=btn.nextElementSibling;
+    var open=item.classList.contains('open');
+    if(open){item.classList.remove('open');ans.style.maxHeight=null;}
+    else{item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  }
+  if(window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+    },{threshold:0.12});
+    document.querySelectorAll('.fade').forEach(function(el){obs.observe(el);});
+  }else{
+    document.querySelectorAll('.fade').forEach(function(el){el.classList.add('in');});
+  }
+</script>
+</body>
+</html>
